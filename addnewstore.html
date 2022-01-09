@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Store</title>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e9f2f3;
+    position: relative;
+}
+body::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: #ccecf5;
+    clip-path: polygon(86% 0, 100% 0, 100% 100%, 60% 100%);
+}
+.container{
+    z-index: 12;
+    max-width: 1050px;
+    width: 100%;
+    background: rgb(165, 186, 199);
+    border-radius: 12px;
+    margin: 0 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+.container .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 20px;
+}
+.content .image-box{
+    max-width: 55%;
+}
+.content .image-box img{
+    width: 100%;
+}
+.content .topic{
+    font-size: 22px;
+    font-weight: 500;
+    color: #0f0b0f;
+}
+.content form{
+    width: 40%;
+    margin-right: 30px;
+}
+.content .input-box{
+    height: 50px;
+    width: 100%;
+    margin: 16px 0;
+    position: relative;
+}
+.content .input-box input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    padding-left: 16px;
+    background:#fae9fb;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+.content .input-box input:focus,
+.content .input-box input:valid{
+    border-color: #585158;
+    background-color: #fff;
+}
+.content .input-box label{
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    color: #636c72;
+    font-size: 15px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+.content .input-box input:focus ~ label,
+.content .input-box input:valid ~ label{
+    top: 0;
+    left: 12px;
+    display: 14px;
+    color: #111313;
+    background: rgb(149, 177, 226); 
+}
+.content .message-box{
+    min-height: 100px;
+    position: relative;
+}
+.content .message-box textarea{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    resize: none;
+    background: #cdcfd1;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    outline: none;
+  /* transition 0.3s ease; */
+}
+
+.content .message-box textarea:focus{
+    border-color: #b4dae4;
+    background-color: #fff;
+}
+.content .message-box label{
+    position: absolute;
+    font-size: 16px;
+    color: #636c72;   
+    left: 18px;
+    top: 6px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.content .message-box textarea:focus ~ label{
+    left: 12px;
+    top: -10px;
+    color: #a9dee6;
+    font-size: 14px;
+    background: #fff;
+}
+.content .input-box input[type="submit"]{
+    color: #fff;
+    background: #98b8d3;
+    padding-left: 0;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;    
+}
+.content .input-box input[type="submit"]:hover{
+    background-color: #8badda;
+}
+@media (max-width:1000px) {
+  .content .image-box{
+    max-width: 70%;
+  }
+  .content{
+    padding: 10px 0;
+  }
+}
+@media (max-width:900px) {
+  .content .image-box{
+    display: none;
+  }
+  .content form{
+    width: 100%;
+    margin-left: 30px;
+  }
+}
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+          <div class="image-box">
+              <img src="img/photo.png" alt="">
+          </div>
+        <form action="#">
+          <div class="topic">Add New Store Details</div>
+          <div class="input-box">
+            <input type="text" required>
+            <label>Enter Store Name</label>
+          </div>
+          <div class="input-box">
+            <input type="text" required>
+            <label>Product Categories in Store</label>
+          </div>
+          <div class="input-box">
+            <input type="text" required>
+            <label>Product Range</label>
+          </div>
+          <div class="input-box">
+            <input type="text" required>
+            <label>Address of Store</label>
+          </div>
+          <div class="message-box">
+            <label>About Store</label>
+          </div>
+          <div class="input-box">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+      </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
